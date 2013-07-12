@@ -1,0 +1,28 @@
+﻿<Window x:Class="BicycleWorldWPFClient.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Width="220" 
+      Height="176"
+        WindowStartupLocation="CenterScreen"
+	Title="Login" >
+
+    <Grid Margin="10" Height="156" Width="200">
+        <StackPanel Margin="0,0,0,0">
+            <TextBlock Text="Bicycle World" FontSize="18"/>
+            <TextBlock Text=" "/>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Username: " Width="80"/>
+                <TextBox Text="Fred" Name="txtUsername" Width="100"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Password: " Width="80"/>
+                <PasswordBox Password="Pa$$w0rd"  Name="txtPassword" Width="100"/>
+            </StackPanel>
+<TextBlock Height="12" Width="6"/>
+            <Button Content="Login" Click="Button_Click" Width="60" />
+        </StackPanel>
+        
+    </Grid>
+</Window>

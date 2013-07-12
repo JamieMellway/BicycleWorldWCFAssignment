@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://BicycleWorldSales.ca/2013/03/13" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://BicycleWorldSales.ca/2013/03/13" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BicycleWorldSales.ca/2013/03/13/Imports">
+      <xsd:import namespace="http://BicycleWorldSales.ca/2013/03/13" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" />
+      <xsd:import namespace="http://BicycleWorld.ca/2013/03/12" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BicycleWorldEntityModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BicycleWorldSalesService_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Test_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q1="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q1:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Test_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q2="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q2:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Login_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q3="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q3:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Login_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q4="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q4:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_IsUserAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAdmin" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_IsUserAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_IsUserAdmin_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q5="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q5:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_IsUserAdmin_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q6="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q6:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_AddItemToCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemToCart" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_AddItemToCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_AddItemToCart_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q7="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q7:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_AddItemToCart_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q8="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q8:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_RemoveItemFromCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemFromCart" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_RemoveItemFromCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemFromCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_RemoveItemFromCart_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q9="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q9:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_RemoveItemFromCart_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q10="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q10:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCart" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCart_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q11="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q11:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCart_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q12="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q12:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCartList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartList" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCartList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartListResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCartList_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q13="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q13:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetShoppingCartList_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q14="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q14:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Checkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Checkout" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Checkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Checkout_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q15="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q15:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_Checkout_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q16="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q16:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderListCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderListCount" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderListCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderListCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderListCount_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q17="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q17:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderListCount_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q18="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q18:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderList" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderList_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q19="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q19:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesOrderList_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q20="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q20:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesHistory" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesHistory_DatabaseFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q21="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q21:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="BicycleWorldSalesService_GetSalesHistory_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" xmlns:q22="http://schemas.datacontract.org/2004/07/BicycleWorldObjectModel" element="q22:SystemFault" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="BicycleWorldSalesService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Test">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/Test" message="tns:BicycleWorldSalesService_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/TestResponse" message="tns:BicycleWorldSalesService_Test_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/TestSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_Test_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/TestDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_Test_DatabaseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Login">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/Login" message="tns:BicycleWorldSalesService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/LoginResponse" message="tns:BicycleWorldSalesService_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/LoginSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_Login_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/LoginDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_Login_DatabaseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="IsUserAdmin">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/IsUserAdmin" message="tns:BicycleWorldSalesService_IsUserAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/IsUserAdminResponse" message="tns:BicycleWorldSalesService_IsUserAdmin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/IsUserAdminSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_IsUserAdmin_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/IsUserAdminDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_IsUserAdmin_DatabaseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddItemToCart">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/AddItemToCart" message="tns:BicycleWorldSalesService_AddItemToCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/AddItemToCartResponse" message="tns:BicycleWorldSalesService_AddItemToCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/AddItemToCartSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_AddItemToCart_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/AddItemToCartDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_AddItemToCart_DatabaseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="RemoveItemFromCart">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/RemoveItemFromCart" message="tns:BicycleWorldSalesService_RemoveItemFromCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/RemoveItemFromCartResponse" message="tns:BicycleWorldSalesService_RemoveItemFromCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/RemoveItemFromCartDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_RemoveItemFromCart_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/RemoveItemFromCartSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_RemoveItemFromCart_SystemFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="GetShoppingCart">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCart" message="tns:BicycleWorldSalesService_GetShoppingCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartResponse" message="tns:BicycleWorldSalesService_GetShoppingCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_GetShoppingCart_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_GetShoppingCart_DatabaseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetShoppingCartList">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartList" message="tns:BicycleWorldSalesService_GetShoppingCartList_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartListResponse" message="tns:BicycleWorldSalesService_GetShoppingCartList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartListDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_GetShoppingCartList_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartListSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_GetShoppingCartList_SystemFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="true" name="Checkout">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/Checkout" message="tns:BicycleWorldSalesService_Checkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/CheckoutResponse" message="tns:BicycleWorldSalesService_Checkout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/CheckoutSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_Checkout_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/CheckoutDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_Checkout_DatabaseFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSalesOrderListCount">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListCount" message="tns:BicycleWorldSalesService_GetSalesOrderListCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListCountResponse" message="tns:BicycleWorldSalesService_GetSalesOrderListCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListCountDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_GetSalesOrderListCount_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListCountSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_GetSalesOrderListCount_SystemFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSalesOrderList">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderList" message="tns:BicycleWorldSalesService_GetSalesOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListResponse" message="tns:BicycleWorldSalesService_GetSalesOrderList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_GetSalesOrderList_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListSystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_GetSalesOrderList_SystemFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSalesHistory">
+      <wsdl:input wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesHistory" message="tns:BicycleWorldSalesService_GetSalesHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesHistoryResponse" message="tns:BicycleWorldSalesService_GetSalesHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesHistoryDatabaseFaultFault" name="DatabaseFaultFault" message="tns:BicycleWorldSalesService_GetSalesHistory_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesHistorySystemFaultFault" name="SystemFaultFault" message="tns:BicycleWorldSalesService_GetSalesHistory_SystemFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DefaultBinding_BicycleWorldSalesService" type="tns:BicycleWorldSalesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserAdmin">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/IsUserAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemToCart">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/AddItemToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItemFromCart">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/RemoveItemFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCart">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartList">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetShoppingCartList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Checkout">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/Checkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderListCount">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderListCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderList">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesHistory">
+      <soap:operation soapAction="http://BicycleWorldSales.ca/2013/03/13/BicycleWorldSalesService/GetSalesHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault name="DatabaseFaultFault" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault name="SystemFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

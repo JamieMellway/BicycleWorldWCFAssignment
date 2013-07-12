@@ -1,0 +1,11 @@
+﻿
+
+
+Step 1: (Only if namespace etc. change) Delete files in GeneratedXml in Windows Explorer
+Step 2: Build ServiceLibrary and ServiceModelClient projects
+Step 3: Open Console and run GenerateProxy.bat
+Step 4: Say yes to update open files, if they are already open.
+Step 5: Manually edit the proxy to have using System.ServiceModel; near the top
+Step 6: Manually edit the proxy to have [TransactionFlow(TransactionFlowOption.Mandatory)] before GetSalesOrderList, GetSalesOrderListCount, GetSalesHistory, and Checkout.
+Step 7: Rebuild project.
+Step 8: (Only if namespace etc. change) If the file names have changed, drop the legacy files and add the new files to the solution.

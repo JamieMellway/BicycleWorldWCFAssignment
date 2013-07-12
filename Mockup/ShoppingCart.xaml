@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="Mockup.ShoppingCartForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Name="ShoppingCart"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid Margin="10" Height="405">
+        <StackPanel Margin="0,0,0,43">
+            <StackPanel VerticalAlignment="Top">
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Height="22">
+                    <TextBlock VerticalAlignment="Center">User: Fred</TextBlock>
+                    <Button>Logout</Button>
+                    <Button Content="View Sales History"/>
+                </StackPanel>
+                <TextBlock Text="Bicycle World Products" FontSize="22"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Search Products: "/>
+                    <TextBox Width="100"></TextBox>
+                    <Button>Search</Button>
+                </StackPanel>
+                <ListBox>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Red Rocket Mountain Bike" Width="175"/>
+                            <TextBlock Width="18" />
+                            <TextBox Width="30">1</TextBox>
+                            <TextBox Width="75" HorizontalContentAlignment="Right">$879.99</TextBox>
+                            <Button Content="Add To Cart" Width="75"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Blue Swin Mountain Bike" Width="175"/>
+                            <TextBlock Width="18" />
+                            <TextBox Width="30">1</TextBox>
+                            <TextBox Width="75" HorizontalContentAlignment="Right">$1179.99</TextBox>
+                            <Button Content="Add To Cart" Width="75"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+                <TextBlock Text=" " Height="30" />
+
+               
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Shopping Cart" FontSize="22"/>
+                <ListBox>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Red Rocket Mountain Bike" Width="175"/>
+                            <TextBlock Width="18" />
+                            <TextBox Width="30">1</TextBox>
+                            <TextBox Width="75" HorizontalContentAlignment="Right">$879.99</TextBox>
+                            <Button Content="Remove" Width="75"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Blue Swin Mountain Bike" Width="175"/>
+                            <TextBlock Width="18" />
+                            <TextBox Width="30">1</TextBox>
+                            <TextBox Width="75" HorizontalContentAlignment="Right">$1179.99</TextBox>
+                            <Button Content="Remove" Width="75"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </StackPanel>
+
+            <TextBlock Text=" " Height="8" />
+            
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                <Button>Checkout</Button>
+                <TextBlock Text=" " Width="30" VerticalAlignment="Center"/>
+                <TextBlock Text="Shopping Cart Items: " VerticalAlignment="Center"/>
+                <TextBlock Text="2" VerticalAlignment="Center"/>
+                <TextBlock Text=" @ " VerticalAlignment="Center"/>
+                <TextBlock Text="$2059.98" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

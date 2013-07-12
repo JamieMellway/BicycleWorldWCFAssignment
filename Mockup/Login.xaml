@@ -1,0 +1,29 @@
+﻿<Page x:Class="Mockup.Login"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  mc:Ignorable="d" 
+	  
+	Title="Login" Loaded="Page_Loaded">
+
+	<Grid Margin="10" Height="150" Width="180">
+		<StackPanel Margin="0,0,0,44">
+			<TextBlock Text="Bicycle World" FontSize="18"/>
+			<TextBlock Text=" "/>
+
+			<StackPanel Orientation="Horizontal">
+				<TextBlock Text="Username: " Width="80"/>
+				<TextBox Width="100"/>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal">
+				<TextBlock Text="Password: " Width="80"/>
+				<TextBox Width="100"/>
+			</StackPanel>
+
+			<Button Content="Login"/>
+		</StackPanel>
+		
+	</Grid>
+</Page>

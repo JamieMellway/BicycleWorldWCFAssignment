@@ -1,0 +1,35 @@
+﻿<Window x:Class="BicycleWorldWPFClient.AdminForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:client="clr-namespace:BicycleWorldWPFClient"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Height="700"
+        Width="870">
+    <Window.DataContext>
+        <client:AdminFormViewModel/>
+    </Window.DataContext>
+
+    <Grid  >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"  Background="Beige">
+                <Border BorderThickness="1">
+                    <StackPanel Margin="10">
+                        <Button Content="Categories" Click="Categories_Click"/>
+                        <TextBlock Height="6"/>
+                        <Button Content="Products" Click="Products_Click"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+            <Border Grid.Column="1" BorderThickness="1">
+                <DockPanel x:Name="mainPanel"  >
+                    <ContentControl x:Name="contentControl"/>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
