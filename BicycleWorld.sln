@@ -31,8 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database Scripts", "Databas
 		DatabaseScripts\4-Inserts for BicycleWorld.Customers.sql = DatabaseScripts\4-Inserts for BicycleWorld.Customers.sql
 		DatabaseScripts\5-Inserts for BicycleWorld.ProductCategories.sql = DatabaseScripts\5-Inserts for BicycleWorld.ProductCategories.sql
 		DatabaseScripts\6-Inserts for BicycleWorld.Products.sql = DatabaseScripts\6-Inserts for BicycleWorld.Products.sql
-		DatabaseScripts\7-SqlPersistenceProviderSchema.sql = DatabaseScripts\7-SqlPersistenceProviderSchema.sql
-		DatabaseScripts\8-SqlPersistenceProviderLogic.sql = DatabaseScripts\8-SqlPersistenceProviderLogic.sql
+		DatabaseScripts\99-Inserts That Don't Depend on AdventureWorks.sql = DatabaseScripts\99-Inserts That Don't Depend on AdventureWorks.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Documentation", "_Documentation", "{AAE1C44C-1D97-4B72-8F10-0822DE401C51}"
