@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 BicycleWorldWCFAssigment
 ========================
 
@@ -19,9 +18,3 @@ Business Layer: DataContracts for DTOs and Custom faults in ObjectModel.  Since 
 Service Layer: There will be two services.  The service for products and categories will use basicHttpBinding.  The ShoppingCart and SalesOrder service will be over https on wsHttpContextBinding using the TransportWithMessageCredentials security mode with Username credentials, have a PerSessionInstanceContextMode, have Logging, will do authorization by a customer service behaviour, will use salted hashes stored in the database, use durable sessions, hosted with a WPF host, will use a self-issued certificate, and will use the RepeatableRead transactional level.
 
 Client Layer:  The client will be WPF.  Login screen. Category list and details. Product list and details.  Readonly SaleOrderHistory list and detail.  Shopping Cart main screen.
-=======
-BicycleWorldWPF
-===============
-
-Assignment from WCF course.  Shopping cart app.
->>>>>>> e0d0481501efef5a9d298f2be35aabcde2a81d96
