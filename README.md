@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is an assignment for a WCF course.  It's a shopping cart app in WPF.
 
 There are scripts in the DatabaseScripts solution folder to help generate the needed database.
@@ -10,3 +11,9 @@ Business Layer: DataContracts for DTOs and Custom faults  in ObjectModel.  Since
 ShoppingCart check in (creating sales order and decrementing quantity) needs to be in one transaction.  
 Service Layer: There will be two services.  The service for products and categories will use basicHttpBinding.  The ShoppingCart and SalesOrder service will be over https on wsHttpContextBinding using the TransportWithMessageCredentials security mode with Username credentials, have a PerSessionInstanceContextMode, have Logging, will do authorization by a customer service behaviour, will use salted hashes stored in the database, use durable sessions, hosted with a WPF host, will use a self-issued certificate, and will use the RepeatableRead transactional level.
 Client Layer:  The client will be WPF.  Login screen. Category list and details. Product list and details.  Readonly SaleOrderHistory list and detail.  Shopping Cart main screen.
+=======
+BicycleWorldWPF
+===============
+
+Assignment from WCF course.  Shopping cart app.
+>>>>>>> origin/master
